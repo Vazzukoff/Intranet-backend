@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# Database (PostgreSQL or SQLite)
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+pgdata/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+*.lcov
+
+# Editor config
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Docker (if applicable)
+docker-compose.override.yml
+
+# Prisma (future use)
+prisma/migrations/
