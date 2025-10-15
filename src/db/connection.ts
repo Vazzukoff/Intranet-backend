@@ -16,9 +16,9 @@ export const pool = new pg.Pool({
 
 export const connectDatabase = async (): Promise<void> => {
   try {
-    const client = await pool.connect(); // obtenemos una conexión del pool
-    await client.query("SELECT 1"); // consulta de prueba
-    client.release(); // liberamos la conexión
+    const client = await pool.connect();
+    await client.query("SELECT 1");
+    client.release();
     console.log("✅ Database connection established");
   } catch (error) {
     console.error("❌ Unable to connect to the database:", error);
