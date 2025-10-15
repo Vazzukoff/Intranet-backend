@@ -8,7 +8,10 @@ export const pool = new pg.Pool({
     host: process.env.DB_HOST,
     port: Number(process.env.DB_PORT),
     database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD
+    password: process.env.DB_PASSWORD,
+    ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 export const connectDatabase = async (): Promise<void> => {
