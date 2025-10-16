@@ -13,8 +13,8 @@ import listEndpoints from 'express-list-endpoints';
 const app = express();
 app.use(express.json());
 
-app.use(cookieParser());
 app.use(corsMiddleware);
+app.use(cookieParser());
 
 // Rutas públicas (sin autenticación)
 app.use("/api/auth", authRoutes);

@@ -16,8 +16,8 @@ export function createUserSession(
 ) {
   res.cookie(COOKIE_NAME, token, {
     httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
-    maxAge: 60 * 60 * 24 * 7 * 1000, // 7 días en ms
+    sameSite: "none", // ✅ necesario para dominios distintos
+    secure: true,     // ✅ obligatorio con sameSite: "none"
+    maxAge: 60 * 60 * 24 * 7 * 1000, // 7 días
   });
 }
